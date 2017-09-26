@@ -1,0 +1,16 @@
+ <div id='box'>
+		<?php
+			$query = mysqli_query($con, "SELECT * FROM vid_entry");
+			while($row = mysqli_fetch_array($query)){
+			
+		?>
+        <div id='url'>
+		<a href="admin_view_video.php?video=<?php echo $row['url']; ?>">
+			<?php echo $row['name'];?>
+		</div>
+        <a/>
+		<?php
+		}
+		mysqli_close($con);
+		?>
+    </div>
